@@ -42,7 +42,7 @@ public class Vertice implements Comparable<Vertice> {
     }
 
     @Override
-    public int compareTo(Vertice verticeOutro) {
-        return Double.compare(this.minDistance, verticeOutro.minDistance);
+    public int compareTo(Vertice verticeComparado) {
+        return Double.compare(this.minDistance, verticeComparado.minDistance);
     }
 }

@@ -2,7 +2,7 @@ public class Fronteira {
     private final double peso;
     private final Vertice verticeAlvo;
 
-    public Fronteira(double peso, Vertice verticeInicial, Vertice verticeAlvo) {
+    public Fronteira(double peso, Vertice verticeAlvo) {
         this.peso = peso;
         this.verticeAlvo = verticeAlvo;
     }
@@ -11,7 +11,7 @@ public class Fronteira {
         return peso;
     }
 
-    public Vertice getTargetVertex() {
+    public Vertice getVerticeAlvo() {
         return verticeAlvo;
     }
 }

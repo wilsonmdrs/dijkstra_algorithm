@@ -4,16 +4,20 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class AlgoritmoProgramacaoDinamica {
+
+    //Calcula a distancia entre o vertice origem e todos os outros vertices
     public void calcularCaminho(Vertice verticeOrigem) {
         verticeOrigem.setMenorDistancia(0);
         PriorityQueue<Vertice> filaPrioridade = new PriorityQueue<>();
         filaPrioridade.add(verticeOrigem);
 
         while (!filaPrioridade.isEmpty()) {
+            //Pegando o topo da fila e removendo
             Vertice vertice = filaPrioridade.poll();
 
+            //Pegando todas os vertices que fazem fronteira com o vertice atual
             for (Fronteira fronteira : vertice.getFronteiras()) {
-                Vertice v = fronteira.getTargetVertex();
+                Vertice v = fronteira.getVerticeAlvo();
                 double peso = fronteira.getPeso();
                 double menorDistancia = vertice.getMenorDistancia() + peso;
 
